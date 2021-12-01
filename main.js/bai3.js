@@ -1,16 +1,22 @@
-let string = prompt("Nhập vào số chuỗi bất kì: ");
+let str = prompt('String: ');
+let array = str.split('');
+let arr = ['a', 'o', 'e', 'u', 'i']
 
-function kiemTraNguyenAm(str) {
-    let nguyenAm = ["a", "o", "e", "u", "i"];
-    let count = 0;
-    for (let i = 0; i < str.length; i++) {
-        for (let j = 0; j < nguyenAm.length; j++) {
-            if (str[i].toLowerCase() === nguyenAm[j]) {
-                count++;
+function demSoKyTuNguyenAm(arr1, arr2) {
+    sum = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                sum += 1;
             }
+
         }
     }
-    return count;
+    if (sum !== 0 ){
+        return sum;
+    } else {
+        return false;
+    }
 }
 
-document.write("Dãy có: " + kiemTraNguyenAm(string) + " ký tự nguyên âm");
+console.log(demSoKyTuNguyenAm(array, arr));
