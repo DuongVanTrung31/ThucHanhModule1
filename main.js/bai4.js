@@ -27,4 +27,4 @@ objAnimal1.setWeight(45.6);
 objAnimal1.toString();
 let objAnimal2 = new Animal();
 objAnimal2.setName('Mouse');
-objAnimal2.getWeight(1);
+objAnimal2.setWeight(1);
